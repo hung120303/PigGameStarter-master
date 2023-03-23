@@ -14,12 +14,12 @@ public class PigGameState {
         runningTotal=0;
         die=1;
     }
-    public PigGameState(int id, int player0Score, int player1Score, int runningTotal, int die){
-        this.id = id;
-        this.player1Score = player1Score;
-        this.player0Score = player0Score;
-        this.runningTotal = runningTotal;
-        this.die = die;
+    public PigGameState(PigGameState pigGameState){
+        this.die = pigGameState.getId();
+        this.runningTotal = pigGameState.getRunningTotal();
+        this.player0Score = pigGameState.getPlayer0Score();
+        this.player1Score = pigGameState.getPlayer1Score();
+        this.id = pigGameState.getId();
     }
     public int getId(){ return id;}
     public int getPlayer0Score() {return player0Score;}
